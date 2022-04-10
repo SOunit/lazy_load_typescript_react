@@ -1,4 +1,4 @@
-import { dataList } from "./data-list";
+import { dataList } from "../data/data-list";
 import { PageItem } from "./page-item";
 
 export const Page3 = () => (

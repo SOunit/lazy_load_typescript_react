@@ -5,21 +5,21 @@ import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 // import { Page2 } from "./components/page-2";
 // import { Page3 } from "./components/page-3";
 // import { Page4 } from "./components/page-4";
+import { lazy, Suspense } from "react";
 import "./App.css";
-import React, { Suspense } from "react";
 
-// const Page1 = React.lazy(() =>
-//   import("./components/page-1").then(({ Page1 }) => ({ default: Page1 }))
-// );
-// const Page2 = React.lazy(() =>
-//   import("./components/page-2").then(({ Page2 }) => ({ default: Page2 }))
-// );
-// const Page3 = React.lazy(() =>
-//   import("./components/page-3").then(({ Page3 }) => ({ default: Page3 }))
-// );
-// const Page4 = React.lazy(() =>
-//   import("./components/page-4").then(({ Page4 }) => ({ default: Page4 }))
-// );
+const Page1 = lazy(() =>
+  import("./components/page-1").then(({ Page1 }) => ({ default: Page1 }))
+);
+const Page2 = lazy(() =>
+  import("./components/page-2").then(({ Page2 }) => ({ default: Page2 }))
+);
+const Page3 = lazy(() =>
+  import("./components/page-3").then(({ Page3 }) => ({ default: Page3 }))
+);
+const Page4 = lazy(() =>
+  import("./components/page-4").then(({ Page4 }) => ({ default: Page4 }))
+);
 
 function App() {
   return (
